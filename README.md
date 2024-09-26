@@ -6,7 +6,7 @@
 ![CI](https://github.com/brianegan/chewie/workflows/CI/badge.svg)
 [![Generic badge](https://img.shields.io/badge/platform-android%20|%20ios%20|%20web%20-blue.svg)](https://pub.dev/packages/chewie)
 
-The video player for Flutter with a heart of gold. 
+The video player for Flutter with a heart of gold.
 
 The [`video_player`](https://pub.dartlang.org/packages/video_player) plugin provides low-level access to video playback. Chewie uses the `video_player` under the hood and wraps it in a friendly Material or Cupertino UI!
 
@@ -33,7 +33,7 @@ dependencies:
 
 ```dart
 import 'package:chewie/chewie.dart';
-final videoPlayerController = VideoPlayerController.networkUrl(Uri.parse(
+final videoPlayerController = VlcPlayerController.networkUrl(Uri.parse(
     'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4'));
 
 await videoPlayerController.initialize();
@@ -113,7 +113,7 @@ Your `additionalOptions` are already included here (if you provided `additionalO
 
 ### Translations
 
-What is an option without proper translation? 
+What is an option without proper translation?
 
 To add your translation strings add:
 
@@ -162,7 +162,7 @@ ChewieController(
 );
 ```
 
-The `index` attribute is for if you want to structure your subtitles in your database and provide your indexes here. `end` and `text` are the key attributes. 
+The `index` attribute is for if you want to structure your subtitles in your database and provide your indexes here. `end` and `text` are the key attributes.
 
 The Duration defines which part of your video your subtitles should start and end. For example, if your video is 10 minutes long and you want to add a subtitle between: `00:00` and `00:10`'th of a second:
 
@@ -181,7 +181,7 @@ Please run the app in the [`example/`](https://github.com/brianegan/chewie/tree/
 
 ## Migrating from Chewie < 0.9.0
 
-Instead of passing the `VideoPlayerController` and your options to the `Chewie` widget you now pass them to the `ChewieController` and pass that later to the `Chewie` widget.
+Instead of passing the `VlcPlayerController` and your options to the `Chewie` widget you now pass them to the `ChewieController` and pass that later to the `Chewie` widget.
 
 ```dart
 final playerWidget = Chewie(
@@ -222,7 +222,7 @@ final playerWidget = Chewie(
 - [x] Custom Progress-Bar colors
 - [x] Custom Overlay
 - [x] Allow Sleep (Wakelock)
-- [x] Playbackspeed Control 
+- [x] Playbackspeed Control
 - [x] Custom Route-Pagebuilder
 - [x] Custom Device-Orientation and SystemOverlay before and after fullscreen
 - [x] Custom ErrorBuilder
@@ -231,7 +231,7 @@ final playerWidget = Chewie(
 - [ ] Screen-Mirroring / Casting (Google Chromecast)
 
 
-## iOS warning 
+## iOS warning
 
 The video_player plugin used by chewie will only work in iOS simulators if you are on flutter 1.26.0 or above. You may need to switch to the beta channel `flutter channel beta`
 Please refer to this [issue](https://github.com/flutter/flutter/issues/14647).

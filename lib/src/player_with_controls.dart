@@ -3,7 +3,7 @@ import 'package:chewie/src/helpers/adaptive_controls.dart';
 import 'package:chewie/src/notifiers/index.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:video_player/video_player.dart';
+import 'package:flutter_vlc_player/flutter_vlc_player.dart';
 
 class PlayerWithControls extends StatelessWidget {
   const PlayerWithControls({super.key});
@@ -35,8 +35,7 @@ class PlayerWithControls extends StatelessWidget {
     ) {
       return Stack(
         children: <Widget>[
-          if (chewieController.placeholder != null)
-            chewieController.placeholder!,
+          if (chewieController.placeholder != null) chewieController.placeholder!,
           InteractiveViewer(
             transformationController: chewieController.transformationController,
             maxScale: chewieController.maxScale,
@@ -46,7 +45,12 @@ class PlayerWithControls extends StatelessWidget {
               child: AspectRatio(
                 aspectRatio: chewieController.aspectRatio ??
                     chewieController.videoPlayerController.value.aspectRatio,
-                child: VideoPlayer(chewieController.videoPlayerController),
+                child: VlcPlayer(
+                  controller: chewieController.videoPlayerController,
+                  aspectRatio: chewieController.aspectRatio ??
+                      chewieController.videoPlayerController.value.aspectRatio,
+                  placeholder: const Center(child: CircularProgressIndicator()),
+                ),
               ),
             ),
           ),
@@ -83,8 +87,7 @@ class PlayerWithControls extends StatelessWidget {
       );
     }
 
-    return LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints constraints) {
+    return LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
       return Center(
         child: SizedBox(
           height: constraints.maxHeight,

@@ -15,7 +15,7 @@
 * ⬆️ [#825](https://github.com/fluttercommunity/chewie/pull/825): Upgraded `wakelock_plus` to version `1.2.2`. Thanks [diegotori](https://github.com/diegotori).
 
 ## 1.8.0
-* 🛠️ [#814](https://github.com/fluttercommunity/chewie/pull/814): Refactor VideoPlayerController initialization to adhere to video_player ^2.8.2 guidelines. Thanks [ishworpanta10](https://github.com/ishworpanta10).
+* 🛠️ [#814](https://github.com/fluttercommunity/chewie/pull/814): Refactor VlcPlayerController initialization to adhere to video_player ^2.8.2 guidelines. Thanks [ishworpanta10](https://github.com/ishworpanta10).
 * 🛠️ [#815](https://github.com/fluttercommunity/chewie/pull/815): Fix the Safe area conflict for material controls in Android. Thanks [MadGeorge](https://github.com/MadGeorge).
 * 🛠️ [#821](https://github.com/fluttercommunity/chewie/pull/821): Upgrade chewie's dependency package. Thanks [ycv005](https://github.com/ycv005).
 * 🛠️ [#824](https://github.com/fluttercommunity/chewie/pull/824): Flutter 3.19 enforcement. Thanks [diegotori](https://github.com/diegotori).
@@ -94,7 +94,7 @@
 * ⬆️ [#599](https://github.com/fluttercommunity/chewie/pull/599): Uniform controls. Thanks [BuginRug](https://github.com/BuginRug).
 
   **Slight Breaking Change**. Instead of:
-  
+
   ```dart
   typedef ChewieRoutePageBuilder = Widget Function(
   	  BuildContext context,
@@ -103,9 +103,9 @@
       _ChewieControllerProvider controllerProvider,
   );
   ```
-  
+
   It is now:
-  
+
   ```dart
   typedef ChewieRoutePageBuilder = Widget Function(
   	  BuildContext context,
@@ -114,9 +114,9 @@
       ChewieControllerProvider controllerProvider,
   );
   ```
-  
+
   TL;DR: We had to make `_ChewieControllerProvider` public.
-  
+
 * 🛠️ Fixed lint and formatting problems
 * Under New Management under the auspices of [Flutter Community](https://github.com/fluttercommunity), and new maintainers [diegotori](https://github.com/diegotori) and [maherjaafar](https://github.com/maherjaafar).
 
@@ -237,7 +237,7 @@
 
 ## 0.9.9
 
-* Changed wakelock plugin from `flutter_screen` to `wakelock` due to lack of maintenance of `flutter_screen`. 
+* Changed wakelock plugin from `flutter_screen` to `wakelock` due to lack of maintenance of `flutter_screen`.
 
 ## 0.9.8+1
   * Require latest flutter stable version
@@ -334,7 +334,7 @@
 
 Initial version of Chewie, the video player with a heart of gold.
 
-  * Hand a VideoPlayerController to Chewie, and let it do the rest.
+  * Hand a VlcPlayerController to Chewie, and let it do the rest.
   * Includes Material Player Controls
   * Includes Cupertino Player Controls
   * Spike version: Focus on good looking UI. Internal code is sloppy, needs a refactor and tests
