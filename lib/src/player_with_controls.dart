@@ -43,13 +43,17 @@ class PlayerWithControls extends StatelessWidget {
             scaleEnabled: chewieController.zoomAndPan,
             child: Center(
               child: AspectRatio(
-                aspectRatio: chewieController.aspectRatio ??
-                    chewieController.videoPlayerController.value.aspectRatio,
+                aspectRatio: chewieController.videoPlayerController.value.aspectRatio != 1
+                    ? chewieController.videoPlayerController.value.aspectRatio
+                    : (chewieController.aspectRatio ?? 9 / 16),
                 child: VlcPlayer(
                   controller: chewieController.videoPlayerController,
-                  aspectRatio: chewieController.aspectRatio ??
-                      chewieController.videoPlayerController.value.aspectRatio,
-                  placeholder: const Center(child: CircularProgressIndicator()),
+                  aspectRatio:
+                      chewieController.videoPlayerController.value.aspectRatio != 1
+                          ? chewieController.videoPlayerController.value.aspectRatio
+                          : (chewieController.aspectRatio ?? 9 / 16),
+                  placeholder:
+                      const Center(child: CircularProgressIndicator(color: Colors.white)),
                 ),
               ),
             ),
