@@ -589,11 +589,11 @@ class ChewieController extends ChangeNotifier {
   bool get isPlaying => videoPlayerController.value.isPlaying;
 
   Future<dynamic> _initialize() async {
-    await videoPlayerController.setLooping(looping);
-
     if ((autoInitialize || autoPlay) &&
         !videoPlayerController.value.isInitialized) {
       await videoPlayerController.initialize();
+      //  this had to move afterwards cuz vlc doesn't expect to call this when unninited
+      await videoPlayerController.setLooping(looping);
     }
 
     if (autoPlay) {

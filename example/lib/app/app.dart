@@ -48,9 +48,9 @@ class _ChewieDemoState extends State<ChewieDemo> {
 
   Future<void> initializePlayer() async {
     _videoPlayerController1 =
-        VlcPlayerController.networkUrl(Uri.parse(srcs[currPlayIndex]));
+        VlcPlayerController.network(srcs[currPlayIndex]);
     _videoPlayerController2 =
-        VlcPlayerController.networkUrl(Uri.parse(srcs[currPlayIndex]));
+        VlcPlayerController.network(srcs[currPlayIndex]);
     await Future.wait([
       _videoPlayerController1.initialize(),
       _videoPlayerController2.initialize()
