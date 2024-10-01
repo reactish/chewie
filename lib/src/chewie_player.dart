@@ -1,11 +1,11 @@
 import 'dart:async';
 
-import 'package:chewie/src/chewie_progress_colors.dart';
-import 'package:chewie/src/models/option_item.dart';
-import 'package:chewie/src/models/options_translation.dart';
-import 'package:chewie/src/models/subtitle_model.dart';
-import 'package:chewie/src/notifiers/player_notifier.dart';
-import 'package:chewie/src/player_with_controls.dart';
+import 'package:chewie_vlc/src/chewie_progress_colors.dart';
+import 'package:chewie_vlc/src/models/option_item.dart';
+import 'package:chewie_vlc/src/models/options_translation.dart';
+import 'package:chewie_vlc/src/models/subtitle_model.dart';
+import 'package:chewie_vlc/src/notifiers/player_notifier.dart';
+import 'package:chewie_vlc/src/player_with_controls.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

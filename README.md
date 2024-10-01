@@ -3,7 +3,7 @@
 [![Flutter Community: chewie](https://fluttercommunity.dev/_github/header/chewie)](https://github.com/fluttercommunity/community)
 
 [![Version](https://img.shields.io/pub/v/chewie.svg)](https://pub.dev/packages/chewie)
-![CI](https://github.com/brianegan/chewie/workflows/CI/badge.svg)
+![CI](https://github.com/brianegan/chewie_vlc/workflows/CI/badge.svg)
 [![Generic badge](https://img.shields.io/badge/platform-android%20|%20ios%20|%20web%20-blue.svg)](https://pub.dev/packages/chewie)
 
 The video player for Flutter with a heart of gold.
@@ -14,10 +14,10 @@ The [`video_player`](https://pub.dartlang.org/packages/video_player) plugin prov
 
 | MaterialControls | MaterialDesktopControls |
 | :--------------: | :---------------------: |
-|     ![](https://github.com/brianegan/chewie/raw/master/assets/MaterialControls.png)     |    ![](https://github.com/brianegan/chewie/raw/master/assets/MaterialDesktopControls.png)     |
+|     ![](https://github.com/brianegan/chewie_vlc/raw/master/assets/MaterialControls.png)     |    ![](https://github.com/brianegan/chewie_vlc/raw/master/assets/MaterialDesktopControls.png)     |
 
 ### CupertinoControls
-![](https://github.com/brianegan/chewie/raw/master/assets/CupertinoControls.png)
+![](https://github.com/brianegan/chewie_vlc/raw/master/assets/CupertinoControls.png)
 
 ## Installation
 
@@ -32,7 +32,7 @@ dependencies:
 ## Using it
 
 ```dart
-import 'package:chewie/chewie.dart';
+import 'package:chewie_vlc/chewie.dart';
 final videoPlayerController = VlcPlayerController.networkUrl(Uri.parse(
     'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4'));
 
@@ -61,7 +61,7 @@ void dispose() {
 
 ## Options
 
-![](https://github.com/brianegan/chewie/raw/master/assets/Options.png)
+![](https://github.com/brianegan/chewie_vlc/raw/master/assets/Options.png)
 
 Chewie has some options which control the video. These options appear by default in a `showModalBottomSheet` (similar to YT). By default, Chewie passes  `Playback speed` and `Subtitles` options as an `OptionItem`.
 
@@ -177,7 +177,7 @@ Subtitle(
 
 ## Example
 
-Please run the app in the [`example/`](https://github.com/brianegan/chewie/tree/master/example) folder to start playing!
+Please run the app in the [`example/`](https://github.com/brianegan/chewie_vlc/tree/master/example) folder to start playing!
 
 ## Migrating from Chewie < 0.9.0
 
